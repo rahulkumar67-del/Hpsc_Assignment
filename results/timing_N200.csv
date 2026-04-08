@@ -1,8 +1,8 @@
 function,time_s,pct
-zero_forces,0.849926,17.0199
-add_gravity,0.82412,16.5031
-compute_p_contacts,1.84035,36.8533
-compute_w_contacts,0.712272,14.2633
-integrate_particles,0.6761,13.539
-compute_kinetic_energy,0.0796132,1.59426
-io,0.0113463,0.227212
+zero_forces,0.0139744,7.98252
+add_gravity,0.012845,7.33739
+compute_p_contacts,0.109573,62.5907
+compute_w_contacts,0.0158453,9.0512
+integrate_particles,0.0136914,7.82086
+compute_kinetic_energy,0.00177145,1.01189
+io,0.00736213,4.20542

@@ -390,8 +390,8 @@ int main(int argc, char* argv[]) {
                  <<"  freefall   constvel   bounce   errordt     (verification tests)\n"
                  <<"  multi200   multi1000  multi5000             (simulation experiments)\n"
                  <<"  runtable                                    (serial profiling N=200,1000,5000)\n"
-                 <<"  verify200  verify1000                       (serial vs parallel correctness)\n"
-                 <<"  scaling200 scaling1000                      (speedup & efficiency study)\n"
+                 <<"  verify200  verify1000  verify5000           (serial vs parallel correctness)\n"
+                 <<"  scaling200 scaling1000 scaling5000          (speedup & efficiency study)\n"
                  <<"  all                                         (run everything)\n";
         return 1;
     }
@@ -408,8 +408,10 @@ int main(int argc, char* argv[]) {
     else if (mode=="runtable")   { run_runtime_table(); }
     else if (mode=="verify200")  { run_verification(200); }
     else if (mode=="verify1000") { run_verification(1000); }
+    else if (mode=="verify5000") { run_verification(5000); }
     else if (mode=="scaling200") { run_scaling(200); }
     else if (mode=="scaling1000"){ run_scaling(1000); }
+    else if (mode=="scaling5000"){ run_scaling(5000); }
     else if (mode=="all") {
         run_freefall();
         run_error_vs_dt();
@@ -419,8 +421,10 @@ int main(int argc, char* argv[]) {
         run_multi(1000);
         run_runtime_table();
         run_verification(200);
+        run_verification(1000);
         run_scaling(200);
         run_scaling(1000);
+        run_scaling(5000);
     }
     else { std::cerr<<"Unknown mode: "<<mode<<"\n"; return 1; }
     return 0;

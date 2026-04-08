@@ -69,6 +69,9 @@ scaling200: particle_sim
 scaling1000: particle_sim
 	./particle_sim scaling1000
 
+scaling5000: particle_sim
+	./particle_sim scaling5000
+
 # ── Run everything ───────────────────────────────────────────────
 run_all: particle_sim particle_sim_serial particle_sim_noopt
 	./particle_sim all
